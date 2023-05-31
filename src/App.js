@@ -33,11 +33,12 @@ function App() {
         value: country.countryInfo.iso2,
       }));
 
+      let sortedData = sortData(data);
+
       setCountries(countries);
       setMapCountries(data);
 
       //sort the data; the function is pulled from another file called util.js
-      const sortedData = sortData(data);
       setTableData(sortedData);
     });
   }, []);

@@ -1,16 +1,19 @@
 .footer {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   position: relative;
   bottom: 20px;
   text-align: center;
   margin: 20px auto;
-  width: 100%;
+  width: 80%;
   padding: 20px 0;
+  font-weight: 300;
+  line-height: 1.2rem;
 }
 
 @media (min-width: 990px) {
   .footer {
     position: absolute;
+    width: 100%;
     margin: auto;
     padding: unset;
   }

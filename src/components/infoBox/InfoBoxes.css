@@ -1,6 +1,12 @@
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
 .infoBox {
   flex: 1;
   cursor: pointer;
+  transition: all 0.5s !important;
 }
 
 .infoBox:not(:last-child) {
@@ -22,7 +28,7 @@
 }
 
 .infoBox--selected {
-  border-bottom: 10px solid greenyellow;
+  border-bottom: 6px solid #7dd71d;
 }
 
 .infoBox--red {
@@ -30,5 +36,14 @@
 }
 
 .infoBox__cases--green {
-  color: lightgreen !important;
+  color: #7dd71d !important;
+}
+
+@media (max-width: 400px) {
+  .infoBox__cases {
+    font-size: 1.2rem;
+  }
+  .infoBox__cardContent {
+    /* padding: 5px !important; */
+  }
 }
