@@ -6,34 +6,20 @@ body {
   background-color: #f5f6fa;
 }
 
+.app__container {
+  position: relative;
+  height: 100vh;
+}
+
 .app {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   padding: 20px;
 }
 
 .app__left {
-  flex: 0.9;
-}
-
-.app__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 20px;
-}
-
-.app__stats {
-  display: flex;
-  justify-content: space-between;
-}
-
-h1 {
-  color: red;
-}
-
-.app__dropdown {
-  background-color: white;
 }
 
 .app__right {
@@ -47,17 +33,18 @@ h1 {
   flex-grow: 1;
 }
 
-.app__graph {
-  flex-grow: 1;
-}
-
-.app__graphTitle {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 990px) {
+@media (min-width: 990px) {
   .app {
-    flex-direction: column;
+    flex-direction: row;
+    padding-top: 40px;
+  }
+  .app__left {
+    flex: 0.9;
+    margin-bottom: unset;
+    margin-right: 20px;
+  }
+
+  .app__right {
+    flex: 0.4;
   }
 }

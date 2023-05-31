@@ -1,0 +1,17 @@
+.footer {
+  font-size: 1.1rem;
+  position: relative;
+  bottom: 20px;
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  padding: 20px 0;
+}
+
+@media (min-width: 990px) {
+  .footer {
+    position: absolute;
+    margin: auto;
+    padding: unset;
+  }
+}

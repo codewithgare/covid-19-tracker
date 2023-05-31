@@ -8,7 +8,7 @@ const InfoBox = ({ title, cases, total, active, isRed, ...props }) => {
       onClick={props.onClick}
       className={`infoBox ${active && "infoBox--selected"} ${isRed && "infoBox--red"} `}
     >
-      <CardContent>
+      <CardContent className="infoBox__cardContent">
         <Typography className="infoBox__title" color="textSecondary">
           {title}
         </Typography>
