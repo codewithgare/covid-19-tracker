@@ -1,6 +1,6 @@
 //
 // We import react beacase we want to include some JSX
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import numeral from "numeral";
 import { Circle, Popup } from "react-leaflet";
 
@@ -42,9 +42,6 @@ export const casesTypeColors = {
   },
 };
 
-const circleRefs = useRef();
-circleRefs["some-unique-id"].setStyle({ fillColor: "red" });
-
 //DRAW circles on the map with interactive tooltip
 export const showDataOnMap = (data, casesType = "cases") =>
   data.map((country) => (
@@ -54,9 +51,6 @@ export const showDataOnMap = (data, casesType = "cases") =>
       fillColor={casesTypeColors[casesType].hex}
       fillOpacity={0.4}
       radius={Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier}
-      ref={(ref) => {
-        circleRefs.casesTypeColors[location.id] = ref;
-      }}
     >
       <Popup>
         <div className="info-container">
