@@ -32,18 +32,26 @@
 }
 
 .infoBox--red {
-  border-color: red;
+  border-color: #cc1034;
+}
+.infoBox--orange {
+  border-color: #ff5714;
 }
 
 .infoBox__cases--green {
   color: #7dd71d !important;
 }
 
+.infoBox__cases--orange {
+  color: #ff5714 !important;
+}
+
+.infoBox__cases--red {
+  color: #cc1034 !important;
+}
+
 @media (max-width: 400px) {
   .infoBox__cases {
     font-size: 1.2rem;
-  }
-  .infoBox__cardContent {
-    /* padding: 5px !important; */
   }
 }

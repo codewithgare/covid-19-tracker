@@ -7,11 +7,11 @@ import Table from "./components/table/Table";
 import LineGraph from "./components/graph/LineGraph";
 import Header from "./components/header/Header";
 import InfoBoxes from "./components/infoBox/InfoBoxes";
+import Footer from "./components/footer/Footer";
 import { prettyPrintStat, sortData } from "./util";
 
 import "./App.css";
 import "leaflet/dist/leaflet.css";
-import Footer from "./components/footer/Footer";
 
 function App() {
   const [countries, setCountries] = useState([]);

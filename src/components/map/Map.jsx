@@ -1,3 +1,4 @@
+import React from "react";
 import { MapContainer as LeafletMap, TileLayer, useMap } from "react-leaflet";
 import "./Map.css";
 import { showDataOnMap } from "../../util";

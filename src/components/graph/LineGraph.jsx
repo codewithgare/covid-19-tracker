@@ -3,6 +3,7 @@ import numeral from "numeral";
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
+import { casesTypeColors } from "../../util";
 
 const options = {
   plugins: {
@@ -88,8 +89,8 @@ const LineGraph = ({ casesType = "cases", ...props }) => {
             datasets: [
               {
                 fill: true,
-                backgroundColor: "rgba(204,16,52,0.5)",
-                borderColor: "#cc1034",
+                backgroundColor: `${casesTypeColors[casesType].half_op}`,
+                borderColor: `${casesTypeColors[casesType].hex}`,
                 data: data,
               },
             ],

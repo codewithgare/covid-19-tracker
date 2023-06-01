@@ -5,7 +5,7 @@ const InfoBoxes = ({ casesType, setCasesType, prettyPrintStat, countryInfo }) =>
   return (
     <div className="app__stats">
       <InfoBox
-        isRed
+        isOrange
         active={casesType === "cases"}
         onClick={(e) => setCasesType("cases")}
         title="Confirmed"
@@ -13,6 +13,7 @@ const InfoBoxes = ({ casesType, setCasesType, prettyPrintStat, countryInfo }) =>
         total={prettyPrintStat(countryInfo.cases)}
       />
       <InfoBox
+        isGreen
         active={casesType === "recovered"}
         onClick={(e) => setCasesType("recovered")}
         title="Recovered"

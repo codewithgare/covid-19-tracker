@@ -23,9 +23,9 @@ export const sortData = (data) => {
 
 export const casesTypeColors = {
   cases: {
-    hex: "#CC1034",
-    rgb: "rgb(204, 16, 52)",
-    half_op: "rgba(204, 16, 52, 0.5)",
+    hex: "#ff5714",
+    rgb: "rgb(255, 87, 20)",
+    half_op: "rgba(255, 87, 20, 0.5)",
     multiplier: 80,
   },
   recovered: {
@@ -35,20 +35,25 @@ export const casesTypeColors = {
     multiplier: 120,
   },
   deaths: {
-    hex: "#fb4443",
-    rgb: "rgb(251, 68, 67)",
-    half_op: "rgba(251, 68, 67, 0.5)",
+    hex: "#CC1034",
+    rgb: "rgb(204, 16, 52)",
+    half_op: "rgba(204, 16, 52, 0.5)",
     multiplier: 200,
   },
 };
 
 //DRAW circles on the map with interactive tooltip
-export const showDataOnMap = (data, casesType = "cases") =>
-  data.map((country) => (
+export const showDataOnMap = (data, casesType = "cases") => {
+  //const to hold the pathOptions styles
+  const pathOptions = {
+    color: `${casesTypeColors[casesType].hex}`,
+    fillColor: `${casesTypeColors[casesType].hex}`,
+  };
+
+  return data.map((country) => (
     <Circle
       center={[country.countryInfo.lat, country.countryInfo.long]}
-      color={casesTypeColors[casesType].hex}
-      fillColor={casesTypeColors[casesType].hex}
+      pathOptions={pathOptions}
       fillOpacity={0.4}
       radius={Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier}
     >
@@ -68,5 +73,5 @@ export const showDataOnMap = (data, casesType = "cases") =>
       </Popup>
     </Circle>
   ));
-
-export const prettyPrintStat = (stat) => (stat ? `+${numeral(stat).format("0.0a")}` : "+0");
+};
+export const prettyPrintStat = (stat) => (stat ? `+${numeral(stat).format("0.0a")}` : "0");
