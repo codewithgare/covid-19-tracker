@@ -50,7 +50,7 @@ export const showDataOnMap = (data, casesType = "cases") =>
   =>{
     const circle = useMap()
     circle.setStyle({
-fillColor= `${casesTypeColors[casesType].he}`
+fillColor: `${casesTypeColors[casesType].he}`
     })
   }
   }
