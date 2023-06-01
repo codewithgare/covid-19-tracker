@@ -22,7 +22,7 @@ export const sortData = (data) => {
 };
 
 export const casesTypeColors = (casesType) =>{
-  switch (casesType.properties .type  ){
+  switch (casesType.properties.type){
   case "cases": 
   return {
     hex: "#CC1034",
@@ -44,7 +44,6 @@ export const casesTypeColors = (casesType) =>{
     half_op: "rgba(251, 68, 67, 0.5)",
     multiplier: 200,
   }
-
 }
 };
 
