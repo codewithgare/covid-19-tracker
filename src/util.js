@@ -25,22 +25,22 @@ export const casesTypeColors = (casesType) =>{
   switch (casesType.properties.type){
   case "cases": 
   return {
-    hex: "#CC1034",
-    rgb: "rgb(204, 16, 52)",
+    fillColor: "#CC1034",
+    color: "rgb(204, 16, 52)",
     half_op: "rgba(204, 16, 52, 0.5)",
     multiplier: 80,
   };
   case "recovered": 
   return {
-    hex: "#7dd71d",
-    rgb: "rgb(125, 215, 29)",
+    fillColor : "#7dd71d",
+    color: "rgb(125, 215, 29)",
     half_op: "rgba(125, 215, 29, 0.5)",
     multiplier: 120,
-  };
+  }
   case "deaths": 
   return {
-    hex: "#fb4443",
-    rgb: "rgb(251, 68, 67)",
+    fillColor : "#fb4443",
+    color: "rgb(251, 68, 67)",
     half_op: "rgba(251, 68, 67, 0.5)",
     multiplier: 200,
   }
